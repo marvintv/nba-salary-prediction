@@ -73,7 +73,7 @@ def show_predict_page():
 
     ok = st.button("Calculate Salary")
     if ok:
-        st.subheader('Esimated value of NBA Player:')
+        st.subheader('Estimated value of NBA Player:')
         salary = regressor.predict(user_data)
         salary = str(np.round(salary[0], 2))
         salary = '{:0,.2f}'.format(float(salary))

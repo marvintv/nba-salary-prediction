@@ -46,13 +46,13 @@ def show_explore_page():
     """
     )
 
-    data = df['age'].value_counts()
+    data = df['position'].value_counts()
 
     fig1, ax1 = plt.subplots()
     ax1.pie(data, labels=data.index, autopct="%1.1f%%", shadow=True, startangle=90)
     ax1.axis("equal")  # Equal aspect ratio ensures that pie is drawn as a circle.
 
-    st.write("""#### Number of Player from different ages""")
+    st.write("""#### Percentage of Players Based on Position""")
 
     st.pyplot(fig1)
     
